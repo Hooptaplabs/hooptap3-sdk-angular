@@ -1,0 +1,10 @@
+.DS_Store
+.tmp
+.git
+.idea
+node_modules
+*.log
+dist
+public
+build
+.tpm
