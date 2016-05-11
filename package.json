@@ -1,0 +1,75 @@
+{
+  "name": "Hooptap3-sdk-angular",
+  "version": "0.0.1",
+  "description": "Angular 1.x SDK Wrapper for Hooptap V3 API",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "help": "node_modules/.bin/ls-scripts",
+    "test": "./node_modules/.bin/karma start ./test/karma.conf.js; exit 0",
+    "test-watch": "./node_modules/.bin/karma start --auto-watch --no-single-run ./test/karma.conf.js",
+    "test-coverage": "./node_modules/.bin/karma start ./test/karma.conf.js; exit 0",
+    "eslint": "./node_modules/.bin/eslint src/**/*.js; exit 0",
+    "serve": "./node_modules/.bin/webpack-dev-server --history-api-fallback --inline --progress",
+    "serve-build": "./node_modules/.bin/http-server ./build",
+    "build": "./node_modules/.bin/rimraf build && ./node_modules/.bin/webpack --bail --progress --profile",
+    "build-sourcemap": "./node_modules/.bin/rimraf build && ./node_modules/.bin/webpack --bail --progress --profile",
+    "full": "npm run test-coverage && npm run build && npm run serve-build"
+  },
+  "config": {
+    "scripts": {
+      "start": "Alias for Serve.",
+      "help": "Shows avaiable scripts.",
+      "test": "Karma tests once.",
+      "test-watch": "Same as test but watching source and rerun when file changes.",
+      "test-coverage": "Same as test but with coverage information (and builds test/coverage folder).",
+      "eslint": "Checks eslint code style guide.",
+      "serve": "Serve page from memory and reloads on files change.",
+      "serve-build": "Serve 'build' folder.",
+      "build": "Builds the application on 'build' folder.",
+      "build-sourcemap": "Same as build but with sourcemaps (slower).",
+      "full": "Makes all checks: test + coverage + build + serve this build."
+    }
+  },
+  "keywords": [
+    "hooptap",
+    "sdk",
+    "api",
+    "angular"
+  ],
+  "author": "Roger Fos Soler",
+  "repository": "https://github.com/Hooptaplabs/hooptap3-sdk-angular",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-mocks": "^1.5.5",
+    "angular-storage": "0.0.15",
+    "lodash": "^4.11.1",
+    "npm-ls-scripts": "^0.1.2",
+    "null-loader": "^0.1.1",
+    "restangular": "^1.5.2",
+    "rimraf": "^2.5.2",
+    "uglify-loader": "^1.3.0",
+    "webpack": "^1.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "eslint-config-google": "^0.5.0",
+    "eslint-plugin-promise": "^1.1.0",
+    "http-server": "^0.9.0",
+    "isparta-instrumenter-loader": "^1.0.0",
+    "isparta-loader": "^2.0.0",
+    "jasmine-core": "^2.4.1",
+    "jquery": "^2.2.3",
+    "karma": "^0.13.22",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^2.1.7",
+    "phantomjs-polyfill": "0.0.2",
+    "phantomjs-prebuilt": "^2.1.7",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
